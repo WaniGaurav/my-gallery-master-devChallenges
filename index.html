@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./components/style.css">
-    <title>Document</title>
+    <title>My Gallery</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="profile">
+            <div class="profile-image">
+                <img class="proPic" src="./images/profilePhoto.png" alt="">
+                <div class="intro">
+                    <p class="name">Rodney Cotton</p>
+                    <p class="addrs">Helsinki, Finland</p>
+                </div>
+                <div id="profileInfo" class="proInfo">
+                    <div class="homepage">
+                        <p class="count">100</p>
+                        <p class="title">Posts</p>
+                    </div>
+                    <div class="homepage">
+                        <p class="count">2,242</p>
+                        <p class="title">Follower</p>
+                    </div>
+                    <div class="homepage">
+                        <p class="count">1,432</p>
+                        <p class="title">Following</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gridImages" class="imgsGrid">
+            <img class="img1" src="./images/photo1.png" alt="">
+            <img class="img2 grid-cols-span-2" src="./images/photo2.png" alt="">
+            <img class="img3 grid-cols-span-2" src="./images/photo3.png" alt="">
+            <img class="img4" src="./images/photo_4.png" alt="">
+            <img class="img5" src="./images/photo5.png" alt="">
+            <img class="img6" src="./images/photo6.png" alt="">
+        </div>
+        <footer class="footer">
+            <span class="ftext">
+                created by <strong><u>WaniGaurav</u></strong> - devChallenges.io
+            </span>
+        </footer>
+        <script src="./components/index.js"></script>
+    </div>
 </body>
 </html>
