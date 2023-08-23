@@ -1,6 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+}
+
+:root{
+    --margin-homepage:1.5rem;
+    --padding-intro:1.5rem;
+    --padding-proinfo:4rem;
+    --img4-padding:0.25rem;
+    --img6-padding:0.063rem;
+    --footer-padding:8.375rem;
+    --padding-top-name:1rem;
+    --padding-bottom-name:0.5rem;
+    --padding-top-profile-image:3.75rem;
+    --grid-gap:2rem;
+
+    --fs-name:1.5rem;
+    --fs-addrs:0.875rem;
+    --fs-count:1.125rem;
+    --fs-title:0.875rem;
+
+    --propic-width:9.75rem;
+    --propic-height:9.75rem;
+    --proinfo-width:6.25rem;
+    --proinfo-height:4.188rem;
+
+    --img1-width:18.688rem;
+    --img1-height:18.688rem;
+    
+    --img2-width:39.313rem;
+    --img2-height:18.688rem;
+    
+    --img3-width:39.188rem;
+    --img3-height:18.688rem;
+    
+    --img4-width:18.563rem;
+    --img4-height:39.375rem;
+    
+    --img5-width:18.688rem;
+    --img5-height:18.688rem;
+    
+    --img6-width:18.688rem;
+    --img6-height:18.688rem;
+
+}
+
+@media (width < 1000px){
+    :root{
+        --margin-homepage:0.75rem;
+        --padding-intro:0.75rem;
+        --padding-proinfo:2.438rem;
+        --img4-padding:0.091rem;
+        --img6-padding:0.063rem;
+        --footer-padding:2.75rem;
+        --padding-top-name:0.703rem;
+        --padding-bottom-name:0.15rem;
+        --padding-top-profile-image:1.875rem;
+        --grid-gap:0.731rem;
+
+        --fs-name:0.875rem;
+        --fs-addrs:0.625rem;
+        --fs-count:0.75rem;
+        --fs-title:0.75rem;
+
+        --propic-width:6.36rem;
+        --propic-height:6.36rem;
+        --proinfo-width:4.875rem;
+        --proinfo-height:3.25rem;
+
+        --img1-width:6.833rem;
+        --img1-height:6.845rem;
+        
+        --img2-width:14.374rem;
+        --img2-height:6.845rem;
+        
+        --img3-width:14.328rem;
+        --img3-height:6.845rem;
+        
+        --img4-width:6.787rem;
+        --img4-height:14.423rem;
+        
+        --img5-width:6.833rem;
+        --img5-height:6.845rem;
+        
+        --img6-width:6.833rem;
+        --img6-height:6.845rem;
+
+    }
 }
 
 .container{
@@ -13,6 +101,14 @@
     border: 2px solid brown;
 }
 
+p {
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 .flexBoxClass{
     display: flex;
     flex-direction: column;
@@ -21,20 +117,16 @@
 
         /* profile layout */
 
-/* .profile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}*/
 
 .profile-image{
+    padding-top: var(--padding-top-profile-image);
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
 .proPic{
-    width: 156px;
-    height: 156px;
+    width: var(--propic-width);
+    height: var(--propic-height);
     border-radius: 16px;
 }
 
@@ -42,26 +134,66 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1.5rem;
+    padding-bottom: var(--padding-intro);
+}
+.name{
+    font-family: Montserrat;
+    font-size: var(--fs-name);
+    padding-top: var(--padding-top-name);
+    padding-bottom: var(--padding-bottom-name);
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: #4E5150;
 }    
+.addrs{
+    font-family: Montserrat;
+    font-size: var(--fs-addrs);
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: #A9A9A9;
+}
+
+
+.proInfo{
+    padding-bottom: var(--padding-proinfo);
+    display: flex;
+    justify-content: space-between;
+}
+.proInfo span{
+    align-self: center;
+}
+
 .homepage{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 67px;
+    width: var(--proinfo-width);
+    height: var(--proinfo-height);
     border-radius: 12px;
     background-color: #E5E5E5;
 }
-.proInfo{
-    padding-bottom: 4rem;
-    display: flex;
-    width: 348px;
-    justify-content: space-between;
+.homepage:nth-child(2){
+    margin: 0 var(--margin-homepage);
 }
-.proInfo span{
-    align-self: center;
+
+.count{
+    font-family: Montserrat;
+    font-size: var(--fs-count);
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: 0em;
+    color: #4E5150;
+}
+.title{
+    font-family: Montserrat;
+    font-size: var(--fs-title);
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: #BDBDBD;
 }
 
         /* Images layout */
@@ -69,9 +201,8 @@
 .imgsGrid{
     display: grid;
     margin: auto;
-    /* grid-template-rows: repeat(3 ,1fr); */
     grid-template-columns: repeat(3 ,1fr);
-    gap: 1.5rem;
+    gap: var(--grid-gap);
     height: fit-content;
 }
 
@@ -80,51 +211,74 @@
 }
 
 .img1{
-    width: 299px;
-    height: 299px;
+    width: var(--img1-width);
+    height: var(--img1-height);
     border-radius: 12px;
 }
 .img2{
-    width: 629px;
-    height: 299px;
+    width: var(--img2-width);
+    height: var(--img2-height);
     border-radius: 12px;
-    /* grid-column: 1/3; */
 }
 .img3{
-    width: 627px;
-    height: 299px;
+    width: var(--img3-width);
+    height: var(--img3-height);
     border-radius: 12px;
-    /* grid-column: 0/3; */
 }
 .img4{
-    width: 297px;
-    height: 630px;
+    width: var(--img4-width);
+    height: var(--img4-height);
     border-radius: 12px;
-    padding-left: 0.375rem;
-    /* grid-column: 3/4; */
-    /* grid-row: 2/3; */
     grid-column-start: 3;
-    /* grid-column-end: 4; */
     grid-row-start: 2;
     grid-row-end: 4;
 }
 .img5{
-    width:299px;
-    height:299px;
+    width:var(--img5-width);
+    height:var(--img5-height);
     border-radius: 12px;
     grid-row-start: 3;
     grid-column-start: 1;
 }
 .img6{
-    width:299px;
-    height:299px;
-    border-radius: 12px;
+    width:var(--img6-width);
+    height:var(--img6-height);
+    border-radius: 12px;   
     grid-row-start: 3;
     grid-column-start: 2;
 }
 
+.img:nth-child(4){
+    padding-left: var(--img4-padding);
+}
+.img:nth-child(6){
+    padding-left: var(--img6-padding);
+}
+
 .footer{
-    margin-top: 8.375rem;
+    padding-top: var(--footer-padding);
     display: flex;
     justify-content: center;
+}
+.ftext{
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    color: #B9BDCF;
+}
+.ftext b{
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+.ftext strong{
+    font-family: Montserrat;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0em;
 }
