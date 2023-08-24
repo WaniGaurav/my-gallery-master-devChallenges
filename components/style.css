@@ -58,6 +58,7 @@
         --padding-top-name:0.703rem;
         --padding-bottom-name:0.15rem;
         --padding-top-profile-image:1.875rem;
+        --padding-container:0.75rem;
         --grid-gap:0.731rem;
 
         --fs-name:0.875rem;
@@ -98,6 +99,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 , var(--padding-container);
 }
 
 p {
